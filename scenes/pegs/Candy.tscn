@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/Peg.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/candy_1000.png" type="Texture" id=2]
+[ext_resource path="res://scenes/pegs/Candy.gd" type="Script" id=3]
+[ext_resource path="res://images/candy_50.png" type="Texture" id=4]
+[ext_resource path="res://images/candy_100.png" type="Texture" id=5]
+[ext_resource path="res://sounds/Candy.ogg" type="AudioStream" id=6]
+
+[node name="Candy" type="Node2D"]
+script = ExtResource( 3 )
+t10 = ExtResource( 4 )
+t100 = ExtResource( 5 )
+t1000 = ExtResource( 2 )
+
+[node name="Peg" parent="." instance=ExtResource( 1 )]
+rotation = 9491.96
+scale = Vector2( 0.4, 0.4 )
+size = 0.4
+light_time = 0.4
+color = Color( 0.992157, 1, 0.133333, 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )

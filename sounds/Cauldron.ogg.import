@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cauldron.ogg-27624ac9a8960551c031528c78599662.oggstr"
+
+[deps]
+
+source_file="res://sounds/Cauldron.ogg"
+dest_files=[ "res://.import/Cauldron.ogg-27624ac9a8960551c031528c78599662.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/Opening.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/halls/Hall.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Walls.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/PegField.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/pegs/Candy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/pegs/Reverse.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/pegs/Potion.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/pegs/Skull.tscn" type="PackedScene" id=8]
+
+[node name="Scatter" type="Node2D"]
+script = ExtResource( 2 )
+enter = NodePath("Opening")
+exit = NodePath("Opening2")
+extra = NodePath("Opening3")
+
+[node name="Opening" parent="." instance=ExtResource( 1 )]
+size = 2
+
+[node name="Walls" parent="." instance=ExtResource( 3 )]
+polygon = PoolVector2Array( -401, 5, -405, 88, -437, 173, -554, 326, -598, 443, -583, 653, -587, 687, -619, 708, -645, 698, -664, 663, -664, 473, -629, 316, -568, 180, -560, 81, -548, 44, -513, 0, -448, -28, -418, -27 )
+
+[node name="Opening2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -598, 804 )
+rotation = 1.36515
+kind = 1
+
+[node name="Opening3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 644, 1108 )
+rotation = -1.13703
+size = 2
+kind = 2
+
+[node name="Walls2" parent="." instance=ExtResource( 3 )]
+polygon = PoolVector2Array( 403, 6, 407, 72, 421, 120, 459, 176, 485, 238, 487, 306, 463, 386, 463, 432, 497, 480, 569, 504, 691, 520, 753, 560, 797, 646, 817, 708, 819, 742, 831, 746, 849, 740, 855, 704, 843, 612, 773, 498, 691, 444, 619, 412, 587, 344, 553, 204, 525, 160, 485, 126, 459, 76, 449, 28, 449, -2, 429, -14, 415, -14 )
+
+[node name="Walls3" parent="." instance=ExtResource( 3 )]
+polygon = PoolVector2Array( -573, 904, -495, 967, -394, 1068, -346, 1178, -288, 1313, -212, 1418, -48, 1494, 118, 1548, 222, 1548, 363, 1515, 442, 1479, 473, 1476, 498, 1503, 498, 1526, 475, 1564, 354, 1616, 215, 1631, 8, 1609, -147, 1539, -322, 1440, -396, 1355, -456, 1256, -477, 1182, -546, 1113, -596, 1066, -645, 1007, -645, 942, -618, 915 )
+
+[node name="Walls4" parent="." instance=ExtResource( 3 )]
+polygon = PoolVector2Array( 41, 1189, 46, 1227, 91, 1260, 100, 1262, 169, 1267, 248, 1215, 286, 1136, 300, 1063, 276, 989, 229, 934, 153, 887, 46, 815, -19, 727, -57, 623, -61, 563, -40, 430, 19, 297, 53, 199, 55, 85, 50, 56, 12, 16, -31, 7, -59, 18, -73, 42, -78, 104, -64, 168, -64, 197, -102, 282, -178, 408, -192, 494, -199, 639, -157, 758, -116, 822, -14, 908, 41, 948, 65, 996, 72, 1065, 62, 1108, 48, 1143 )
+
+[node name="PegField" parent="." instance=ExtResource( 4 )]
+position = Vector2( 256, 619 )
+radius = 300
+
+[node name="Candy" parent="PegField" instance=ExtResource( 5 )]
+value = 1
+
+[node name="Skull" parent="PegField" instance=ExtResource( 8 )]
+
+[node name="Potion" parent="PegField" instance=ExtResource( 7 )]
+
+[node name="Reverse" parent="PegField" instance=ExtResource( 6 )]
+
+[node name="PegField2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -394, 484 )
+min_pegs = 2
+max_pegs = 5
+
+[node name="Skull" parent="PegField2" instance=ExtResource( 8 )]
+
+[node name="Candy" parent="PegField2" instance=ExtResource( 5 )]
+
+[node name="Potion" parent="PegField2" instance=ExtResource( 7 )]
+
+[node name="PegField3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -175, 1069 )
+min_pegs = 2
+max_pegs = 5
+
+[node name="Skull" parent="PegField3" instance=ExtResource( 8 )]
+
+[node name="Candy" parent="PegField3" instance=ExtResource( 5 )]
+value = 2
+
+[node name="Potion" parent="PegField3" instance=ExtResource( 7 )]
+
+[node name="Candy2" parent="PegField3" instance=ExtResource( 5 )]
+
+[node name="Reverse" parent="." instance=ExtResource( 6 )]
+position = Vector2( 622, 679 )
+
+[node name="Reverse2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 363, 1301 )
+
+[node name="Reverse3" parent="." instance=ExtResource( 6 )]
+position = Vector2( -314, 762 )

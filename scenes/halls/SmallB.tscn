@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/Opening.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/pegs/Candy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/halls/Hall.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Walls.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/pegs/Potion.tscn" type="PackedScene" id=5]
+
+[node name="SmallB" type="Node2D"]
+script = ExtResource( 3 )
+extra = NodePath("Opening")
+
+[node name="Opening" parent="." instance=ExtResource( 1 )]
+kind = 2
+
+[node name="Walls" parent="." instance=ExtResource( 4 )]
+polygon = PoolVector2Array( -102, -6, -102, 34, -126, 81, -214, 126, -300, 208, -373, 361, -373, 446, -328, 596, -249, 643, -119, 665, 18, 646, 157, 570, 234, 462, 268, 364, 281, 269, 249, 180, 192, 110, 132, 88, 96, 51, 92, 25, 100, 5, 119, -7, 133, -6, 175, 17, 280, 119, 319, 202, 322, 332, 301, 447, 237, 578, 151, 649, 18, 715, -161, 732, -337, 694, -408, 608, -437, 425, -406, 237, -332, 161, -241, 78, -184, 11, -144, -12 )
+
+[node name="Walls2" parent="." instance=ExtResource( 4 )]
+polygon = PoolVector2Array( -30, 217, -81, 243, -136, 309, -153, 370, -142, 425, -102, 455, -43, 455, 40, 404, 72, 347, 72, 294, 53, 234, 15, 217 )
+
+[node name="Potion" parent="." instance=ExtResource( 5 )]
+position = Vector2( -133, 178 )
+
+[node name="Potion2" parent="." instance=ExtResource( 5 )]
+position = Vector2( -252, 483 )
+
+[node name="Potion3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 57, 525 )
+
+[node name="Potion4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 167, 298 )
+
+[node name="Candy" parent="." instance=ExtResource( 2 )]
+position = Vector2( 42, 140 )
+value = 2
+
+[node name="Candy2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -250, 333 )
+value = 2
+
+[node name="Candy3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -106, 568 )
+value = 2
+
+[node name="Candy4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 157, 443 )
+value = 2

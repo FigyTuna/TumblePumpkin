@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/pegs/Candy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Opening.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Walls.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/PegField.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/halls/Hall.gd" type="Script" id=5]
+
+[node name="Bonus" type="Node2D"]
+script = ExtResource( 5 )
+extra = NodePath("Opening")
+
+[node name="Opening" parent="." instance=ExtResource( 2 )]
+rotation = 6.27725
+size = 1
+kind = 2
+
+[node name="Walls" parent="." instance=ExtResource( 3 )]
+polygon = PoolVector2Array( -200, 5, -199, 57, -220, 163, -209, 201, -169, 233, -52, 260, 106, 254, 179, 227, 234, 166, 222, 64, 194, 19, 195, 2, 220, -10, 245, -9, 264, 6, 261, 76, 284, 142, 251, 225, 196, 270, 55, 308, -152, 302, -254, 243, -279, 189, -258, 110, -260, 3, -218, -7 )
+
+[node name="PegField" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2, 51 )
+
+[node name="Candy" parent="PegField" instance=ExtResource( 1 )]
+value = 2

@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/halls/Hall.gd" type="Script" id=1]
+[ext_resource path="res://scenes/PegField.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Opening.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Walls.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/pegs/Candy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/pegs/Reverse.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/pegs/Potion.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/pegs/Skull.tscn" type="PackedScene" id=8]
+
+[node name="Vertical" type="Node2D"]
+script = ExtResource( 1 )
+enter = NodePath("Opening")
+exit = NodePath("Opening2")
+
+[node name="Walls" parent="." instance=ExtResource( 4 )]
+position = Vector2( -501, 54 )
+polygon = PoolVector2Array( 85, -79, 94, -36, 68, 129, 53, 418, 107, 599, 77, 731, 7, 744, -36, 666, 3, 325, -21, 51, -10, -86, 40, -112 )
+
+[node name="Walls2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 410, 80 )
+polygon = PoolVector2Array( 85, -79, 94, -36, 68, 129, 53, 418, 107, 599, 77, 731, 7, 744, -36, 666, 3, 325, -21, 51, -10, -86, 40, -112 )
+
+[node name="Opening" parent="." instance=ExtResource( 3 )]
+rotation = 0.0170632
+size = 2
+
+[node name="Opening2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -22.0001, 784 )
+rotation = -0.0295808
+size = 2
+kind = 1
+
+[node name="PegField" parent="." instance=ExtResource( 2 )]
+position = Vector2( -31, 404 )
+radius = 400
+
+[node name="Candy" parent="PegField" instance=ExtResource( 5 )]
+value = 2
+
+[node name="Reverse" parent="PegField" instance=ExtResource( 6 )]
+
+[node name="Potion" parent="PegField" instance=ExtResource( 7 )]
+
+[node name="Skull" parent="PegField" instance=ExtResource( 8 )]

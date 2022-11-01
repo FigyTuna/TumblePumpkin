@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://images/faery.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Fairy.gd" type="Script" id=2]
+
+[node name="Fairy" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+energy = 0.5
+range_layer_min = -2
+range_layer_max = 2

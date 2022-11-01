@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/Opening.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Walls.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/halls/Hall.gd" type="Script" id=3]
+[ext_resource path="res://scenes/PegField.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/pegs/Candy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/pegs/Reverse.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/pegs/Skull.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/pegs/Potion.tscn" type="PackedScene" id=8]
+
+[node name="WithExtra" type="Node2D"]
+script = ExtResource( 3 )
+enter = NodePath("Opening")
+exit = NodePath("Opening2")
+extra = NodePath("Opening3")
+
+[node name="Opening" parent="." instance=ExtResource( 1 )]
+size = 2
+
+[node name="Opening2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 254, 1372 )
+rotation = -0.690244
+size = 1
+kind = 1
+
+[node name="Opening3" parent="." instance=ExtResource( 1 )]
+position = Vector2( -355, 835 )
+rotation = 1.19028
+size = 1
+kind = 2
+
+[node name="Walls" parent="." instance=ExtResource( 2 )]
+polygon = PoolVector2Array( -402, 18, -396, 229, -383, 246, -335, 249, -321, 281, -337, 310, -373, 313, -420, 392, -410, 626, -415, 650, -452, 651, -474, 631, -465, 258, -482, 14, -474, -16, -419, -8 )
+
+[node name="Walls2" parent="." instance=ExtResource( 2 )]
+polygon = PoolVector2Array( 392, 5, 568, 728, 641, 757, 693, 911, 689, 989, 651, 1039, 405, 1191, 405, 1231, 427, 1249, 671, 1069, 762, 977, 759, 919, 436, -12, 421, -18, 400, -11 )
+
+[node name="Walls3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -8, -5 )
+polygon = PoolVector2Array( -274, 1024, -252, 1036, -171, 1166, -128, 1179, -77, 1167, -47, 1183, -37, 1225, -52, 1254, -50, 1282, 29, 1388, 100, 1485, 111, 1506, 93, 1525, 59, 1528, -43, 1356, -296, 1052, -293, 1031 )
+
+[node name="PegField" parent="." instance=ExtResource( 4 )]
+position = Vector2( 51, 449 )
+radius = 400
+
+[node name="Candy" parent="PegField" instance=ExtResource( 5 )]
+
+[node name="Candy2" parent="PegField" instance=ExtResource( 5 )]
+value = 1
+
+[node name="PegField2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 131, 983 )
+
+[node name="Skull" parent="PegField2" instance=ExtResource( 7 )]
+
+[node name="Skull2" parent="PegField2" instance=ExtResource( 7 )]
+
+[node name="Skull3" parent="PegField2" instance=ExtResource( 7 )]
+
+[node name="Potion" parent="PegField2" instance=ExtResource( 8 )]
+
+[node name="Reverse" parent="." instance=ExtResource( 6 )]
+position = Vector2( -159, 721 )
+
+[node name="Reverse2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 610, 797 )

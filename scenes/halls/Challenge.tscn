@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/Opening.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Walls.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/pegs/Candy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/halls/Hall.gd" type="Script" id=4]
+[ext_resource path="res://scenes/pegs/Reverse.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/pegs/Skull.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/pegs/Potion.tscn" type="PackedScene" id=7]
+
+[node name="Challenge" type="Node2D"]
+script = ExtResource( 4 )
+enter = NodePath("Opening")
+exit = NodePath("Opening2")
+extra = NodePath("Opening3")
+
+[node name="Opening" parent="." instance=ExtResource( 1 )]
+size = 1
+
+[node name="Walls" parent="." instance=ExtResource( 2 )]
+polygon = PoolVector2Array( -254, 6, -240, -9, -214, -7, -197, 12, -208, 178, -188, 221, -151, 263, -147, 290, -180, 291, -201, 324, -195, 444, -171, 508, -44, 546, 441, 516, 470, 529, 485, 558, 483, 814, 462, 831, 441, 831, 421, 817, 423, 703, 396, 623, 358, 612, -40, 619, -195, 578, -278, 495, -291, 354, -273, 150 )
+
+[node name="Opening2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 584, 811 )
+kind = 1
+
+[node name="Walls2" parent="." instance=ExtResource( 2 )]
+polygon = PoolVector2Array( 716, 406, 755, 296, 773, 289, 848, 274, 1500, 249, 1507, 278, 1489, 292, 1375, 306, 884, 324, 841, 349, 805, 388, 766, 634, 757, 809, 737, 830, 702, 830, 685, 812 )
+
+[node name="Opening3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1502, 51 )
+rotation = -1.52531
+size = 1
+kind = 2
+
+[node name="Walls3" parent="." instance=ExtResource( 2 )]
+polygon = PoolVector2Array( 201, -1, 211, 23, 233, 49, 271, 63, 397, 85, 410, 97, 412, 236, 432, 253, 461, 253, 471, 243, 468, 205, 477, 143, 508, 109, 609, 91, 793, 83, 1037, 17, 1315, -67, 1507, -147, 1517, -163, 1515, -185, 1503, -197, 1473, -209, 1395, -223, 1329, -223, 1047, -147, 805, -49, 681, 17, 627, 33, 525, 43, 405, 41, 345, 23, 283, -5, 253, -13, 215, -13 )
+
+[node name="Reverse" parent="." instance=ExtResource( 5 )]
+position = Vector2( 272, 116 )
+
+[node name="Reverse2" parent="." instance=ExtResource( 5 )]
+position = Vector2( -153, 332 )
+
+[node name="Candy" parent="." instance=ExtResource( 3 )]
+position = Vector2( 550, 151 )
+
+[node name="Candy2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 572, 243 )
+
+[node name="Candy3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 619, 327 )
+
+[node name="Candy4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 669, 426 )
+
+[node name="Skull" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1356, 107 )
+
+[node name="Potion" parent="." instance=ExtResource( 7 )]
+position = Vector2( 593, 694 )
+
+[node name="Potion2" parent="." instance=ExtResource( 7 )]
+position = Vector2( -73, 418 )

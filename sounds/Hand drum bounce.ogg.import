@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Hand drum bounce.ogg-b7247a4c100c159d22270dd40aed7148.oggstr"
+
+[deps]
+
+source_file="res://sounds/Hand drum bounce.ogg"
+dest_files=[ "res://.import/Hand drum bounce.ogg-b7247a4c100c159d22270dd40aed7148.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

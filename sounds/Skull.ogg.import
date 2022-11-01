@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Skull.ogg-1794593650e65b4ead89e6ebb4d359cb.oggstr"
+
+[deps]
+
+source_file="res://sounds/Skull.ogg"
+dest_files=[ "res://.import/Skull.ogg-1794593650e65b4ead89e6ebb4d359cb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

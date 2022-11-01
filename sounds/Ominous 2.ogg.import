@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ominous 2.ogg-f6d4234d90c6cd5ad02599ef6f87370d.oggstr"
+
+[deps]
+
+source_file="res://sounds/Ominous 2.ogg"
+dest_files=[ "res://.import/Ominous 2.ogg-f6d4234d90c6cd5ad02599ef6f87370d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

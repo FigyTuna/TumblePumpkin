@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Peg.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/pegs/Potion.gd" type="Script" id=2]
+[ext_resource path="res://images/potion.png" type="Texture" id=3]
+[ext_resource path="res://sounds/Potion.ogg" type="AudioStream" id=4]
+
+[node name="Potion" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Peg" parent="." instance=ExtResource( 1 )]
+rotation = 4805.91
+scale = Vector2( 0.7, 0.7 )
+max_hits = 1
+size = 0.7
+color = Color( 1, 0.145098, 0.145098, 1 )
+texture = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
